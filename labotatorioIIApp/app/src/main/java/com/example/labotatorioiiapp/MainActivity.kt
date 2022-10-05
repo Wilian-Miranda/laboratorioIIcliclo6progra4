@@ -54,9 +54,7 @@ class MainActivity : AppCompatActivity() {
             lvPeople.onItemClickListener = object: AdapterView.OnItemClickListener{
                 override fun onItemClick(p0: AdapterView<*>?, p1: View?, index: Int, p3: Long) {
                     tvResult.setText("Esperando datos...");
-                    tvResult.setText("La persona seleccionada es${names[index]} de edad: ${ages[index]} y del" +
-                            "departamento de ${departments[index]}");
-                    println("${names[index]}");
+                    tvResult.setText("La persona seleccionada es: ${names[index]} de edad: ${ages[index]} y del departamento de ${departments[index]}");
                 }
 
             }
@@ -79,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                     //al estar todos los datos validados le decimos que todo esta validado
                     validation = true;
                 }else{
-                    Toast.makeText(this,"Campo de nombre DEPARTAMENTO o vacio. Campo obligatorio",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this,"Campo de DEPARTAMENTO nulo o vacio. Campo obligatorio",Toast.LENGTH_SHORT).show();
                 }
             }else{
                 Toast.makeText(this,"Campo de EDAD nulo o vacio. Campo obligatorio",Toast.LENGTH_SHORT).show();
@@ -113,7 +111,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addDataToListView(){
-        var adapter= ArrayAdapter(this,R.layout.lista_personas,names);
+        var adapter = ArrayAdapter(this,R.layout.lista_personas,names);
             lvPeople.adapter = adapter;
     }
 

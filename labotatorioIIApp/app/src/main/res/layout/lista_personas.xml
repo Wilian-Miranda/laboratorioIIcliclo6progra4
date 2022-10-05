@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.AppCompat.TextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="20dp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    />
+    android:padding="7pt"
+    android:paddingStart="7pt"
+    android:paddingLeft="7pt"
+    android:paddingTop="7pt"
+    android:paddingEnd="7pt"
+    android:paddingRight="7pt"
+    android:paddingBottom="7pt"
+    android:shadowColor="#A6A2A2" />
